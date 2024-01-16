@@ -1,2 +1,2 @@
-# study
-My homework and work
+# My Homework
+My homework....that's it...yeah
