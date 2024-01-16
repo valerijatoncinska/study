@@ -1,0 +1,7 @@
+public class MainClass {
+    public static void main(String[] args) {
+        System.out.println("Valerija");
+        System.out.println("Toncinska.");
+        System.out.println("21");
+        System.out.println("Adeje");
+    }}
