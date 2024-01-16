@@ -1,2 +1,2 @@
 # My Homework
-My homework....that's it...yeah
+My homework....that's it
