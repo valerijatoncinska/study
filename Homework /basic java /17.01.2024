@@ -1,0 +1,37 @@
+///
+/// Это исходный код в main.java 
+///
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Приветствуем в");
+        System.out.println("CurrencyConverter!");
+        System.out.println();
+        System.out.println();
+        System.out.println("Выберите исходную валюту:");
+        System.out.println();
+        System.out.println("1. EURO");
+        System.out.println("2. USD");
+        System.out.println("3. TL");
+    }
+}
+
+///
+/// Это скомпилированный код в main.class в папке out
+
+///
+public class Main {
+    public Main() {
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Приветствуем в");
+        System.out.println("CurrencyConverter!");
+        System.out.println();
+        System.out.println();
+        System.out.println("Выберите исходную валюту:");
+        System.out.println();
+        System.out.println("1. EURO");
+        System.out.println("2. USD");
+        System.out.println("3. TL");
+    }
+}
