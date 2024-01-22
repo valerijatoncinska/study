@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Приветствуем в");
+        System.out.println("CurrencyConverter!\n\n");
+        // создаю сканер для исходной валюты
+        Scanner currency = new Scanner(System.in);
+        System.out.println("Выберите номер исходной валюты:\n");
+        System.out.println("1. EURO\n\n");
+        // создаю if для выбора исходной валюты
+        int chosenOriginalCurrency = currency.nextInt();
+        if (chosenOriginalCurrency == 1) {
+            System.out.println("Ваша исходная валюта:EURO");
+        }
+        else {System.out.println("Ой! Вы выбрали несуществующую валюту. Пожалуйста, начните процесс заново.");
+            System.exit(-1);}
+        // дополняю сканнер для того, чтобы пользователь мог внести сумму, которую хочет конвертировать
+        System.out.println("Введите ссуму, которую хотите конвертировать:");
+        double workingCurrency = currency.nextDouble();
+        System.out.println("Выберите валюту, в которую хотите конвертировать Вашу сумму:\n");
+        System.out.println("1. EURO");
+        System.out.println("2. USD");
+        System.out.println("3. TL\n\n");
+        int chosenTargetCurrency = currency.nextInt();
+        // создаю if для выбора целевой валюты
+        double euro = 1;
+        double usd = 1.0902;
+        double tl = 32.925;
+        if (chosenTargetCurrency == 1) {
+            System.out.println("Ваша конвертированная сумма:" + workingCurrency*euro);
+        }
+        if (chosenTargetCurrency == 2) {
+            System.out.println("Ваша конвертированная сумма:" + workingCurrency*usd);
+        }
+        if (chosenTargetCurrency == 3) {
+            System.out.println("Ваша конвертированная сумма:" + workingCurrency*tl);
+        }
+        System.out.println("Спасибо, что воспользовались CurrencyConverter!");
+        }
+    }
