@@ -6,7 +6,7 @@ public class IfNumberIsTrue {
     public static void main(String[] args) {
 
 // Создаю сканер для пользовательского ввода
- // С помощью int и года, который ввёл пользователь, высчитываю возраст пользователя
+// С помощью int и года, который ввёл пользователь, высчитываю возраст пользователя
 
         Scanner ageScanner = new Scanner(System.in);
         System.out.println("Введите свой год рождения:");
