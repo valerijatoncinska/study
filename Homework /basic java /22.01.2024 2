@@ -40,6 +40,96 @@ WIP ТРЕТЬЯ ЗАДАЧА (Алгоритм (попытки))
 6. ????
 7. Изучить циклы, for, возможно, так будет легче
 
+WIP ТРЕТЬЯ ЗАДАЧА (Программа (попытки)) Намбер 1
+----------------------------------------------------------------------------------------------------
+public class TableOfTheTruthAndTheLies {
+    public static void main(String[] args) {
+//        if (args.length > 3) {
+//            System.out.println("Неверное количество аргументов.");
+//            System.exit(-1);
+//        } else {}
+//        if String one = args[0];
+//        String two = args[1];
+//        String three = args[2];
+
+
+        boolean i;
+        boolean ili;
+        boolean ne;
+
+
+        if (args.length == 0) {
+            i = true;
+            ili = true;
+            ne = true;
+        } else {
+            if (((args[0].contains("AND") || (args[1].contains("AND") || (args[2].contains("AND")))))) {
+                i = true;
+            } else {
+                i = false;
+            }
+
+            if (((args[0].contains("OR") || (args[1].contains("OR") || (args[2].contains("OR")))))) {
+                ili = true;
+            } else {
+                ili = false;
+            }
+
+            if (((args[0].contains("NO") || (args[1].contains("NO") || (args[2].contains("NO")))))) {
+                ne = true;
+            } else {
+                ne = false;
+            }
+        }
+
+        System.out.println(i);
+        System.out.println(ili);
+        System.out.println(ne);
+
+    }
+    }
+
+WIP ТРЕТЬЯ ЗАДАЧА (Программа (попытки)) Намбер 2
+----------------------------------------------------------------------------------------------------
+
+public class TableOfTruth {
+    public static void main(String[] args) {
+
+        boolean i;
+        boolean ili;
+        boolean ne;
+
+        if (args.length == 0) {
+            String argsBlank = "AND" + "OR" + "NO";
+
+        } else {
+            if String argsBlank.contains("AND") || (args[1].contains("AND") || (args[2].contains("AND")))))) {
+                i = true;
+            } else {
+                i = false;
+            }
+
+            if (((args[0].contains("OR") || (args[1].contains("OR") || (args[2].contains("OR")))))) {
+                ili = true;
+            } else {
+                ili = false;
+            }
+
+            if (((args[0].contains("NO") || (args[1].contains("NO") || (args[2].contains("NO")))))) {
+                ne = true;
+            } else {
+                ne = false;
+            }
+            ;
+
+        }
+    }
+    }
+}
+
+
+
+
 
 
 
