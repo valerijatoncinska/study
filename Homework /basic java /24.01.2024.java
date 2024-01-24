@@ -3,9 +3,10 @@
 
 import java.util.Scanner;
 
-public class CurrencyConverterButBetter {
+class CurrencyConverterButBetter {
     public static void main(String[] args) {
-        
+        String originalCurrency;
+
         do {
             System.out.println(
                     "Приветствуем в CurrencyConverter!\n\n" +
@@ -16,28 +17,28 @@ public class CurrencyConverterButBetter {
                             "Если вы желаете закончить операцию, напишите EXIT\n\n");
 
             Scanner chosenCurrency = new Scanner(System.in);
-            String originalCurrency = chosenCurrency.nextLine();
+            originalCurrency = chosenCurrency.nextLine();
+            double x;
 
             switch (originalCurrency) {
                 case "EURO":
                     System.out.println("\nПеревести Евро\n\n");
-                    originalCurrency = "EURO";
+                    x = 1.0;
                     break;
                 case "USD":
                     System.out.println("\nПеревести доллары США\n\n");
-                    originalCurrency = "USD";
+                    x = 0.92;
                     break;
                 case "TL":
                     System.out.println("\nПеревести турецкие лиры\n\n");
-                    originalCurrency = "TL";
+                    x = 0.03;
                     break;
                 case "EXIT":
                     System.out.println("\nВы вышли из программы CurrencyConverter.\n\n");
-                    System.exit(-1);
-                    break;
+                    continue;
                 default:
                     System.out.println("\nВы ввели неверную валюту.\n\n");
-                    System.exit(-1);
+                    continue;
             }
 
             System.out.println(
@@ -73,16 +74,7 @@ public class CurrencyConverterButBetter {
             System.out.print("Введите сумму перевода: ");
             double sum = chosenCurrency.nextDouble();
 
-            double x;
             double y;
-
-            if (originalCurrency.equals("EURO")) {
-                x = 1.0;
-            } else if (originalCurrency.equals("USD")) {
-                x = 0.92;
-            } else {
-                x = 0.03;
-            }
 
             if (targetCurrency.equals("EURO")) {
                 y = 1.0;
@@ -97,6 +89,6 @@ public class CurrencyConverterButBetter {
             System.out.print("\nВы получите: ");
             System.out.println(total);
 
-        } while (true);
+        } while (!originalCurrency.equals("EXIT"));
     }
 }
