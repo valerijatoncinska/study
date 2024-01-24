@@ -3,7 +3,7 @@
 
 import java.util.Scanner;
 
-class CurrencyConverterButBetter {
+public class CurrencyConverterButBetter {
     public static void main(String[] args) {
         String originalCurrency;
 
