@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+public class CurrencyConverterButBetter {
+    public static void greetMessage() {   // метод, выводящий первое сообщение с приветствием
+        String[] currency = {"EURO", "USD", "TL"};
+        System.out.print(
+                "Приветствуем в CurrencyConverter!\n" +
+                        "Выберите исходную валюту:\n"
+        );
+
+        // Выводим доступные валюты
+        for (String availableCurrency : currency)
+            System.out.println("* " + availableCurrency);
+
+        System.out.println("Или введите EXIT, чтобы завершить программу");
+
+    }
+
+    public static void main(String[] args) {
+        // заявляю строку для использования в методе
+        String currency;
+
+        // вывожу метод с ключевым словом switch для определения исходной валюты
+        greetMessage();
+
+        Scanner scanner = new Scanner(System.in);
+        // заявляю массив дабл для использования в методе
+        double[] currencyRates = {1, 0.92, 0.03};
+        //заявляю дабл x для соблюдения области видимости
+        double x;
+        
+        // создаю цикл, который будет возвращать пользователя в начало программы
+        do {
+            System.out.print("\nВыберите исходную валюту: ");
+            currency = scanner.nextLine();
+
+            /* создаю if для случая, когда пользователь вводит exit для завершения программы
+            при выборе исходной валюты т.к. метод не находится в цикле и не может использовать 
+            ключевое слово "continue" для окончания цикла (или я просто не нашла правильной
+            записи/возможности это сделать, что тоже возможно)
+             */
+            if (currency.equalsIgnoreCase("exit")){
+                continue;
+            } else {
+                x = getRateValue(currency, currencyRates);
+            }
+
+            // вычисление конечной валюты с помощью метода
+            System.out.print("Выберите конечную валюту: ");
+            currency = scanner.nextLine();
+            double y = getRateValue(currency, currencyRates);
+
+
+            System.out.print("Введите сумму в изначальной валюте: ");
+            double initSum = Double.parseDouble(scanner.nextLine());
+
+            double finalSum = initSum * x / y;
+            // Округляем до двух знаков до запятой, округление вниз
+            int roundedTotal = (int) (finalSum * 100);
+            finalSum = (double) roundedTotal / 100;
+
+            System.out.println("Вы получите: " + finalSum);
+        } while (!currency.equalsIgnoreCase("exit"));
+    }
+
+    public static double getRateValue(String currency, double[] rates) {
+
+        double result = 0;
+
+        switch (currency) {
+            case "EURO":
+                result = rates[0];
+                break;
+            case "USD":
+                result = rates[1];
+                break;
+            case "TL":
+                result = rates[2];
+                break;
+        }
+
+        return result;
+    }
+
+}
